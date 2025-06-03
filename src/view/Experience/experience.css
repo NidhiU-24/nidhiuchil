@@ -1,0 +1,198 @@
+.experienceContainer {
+  min-height: 120vh;
+  background-color: var(--background-color);
+  padding: 0 40px;
+}
+
+
+#progress {
+  background-color: #7f00e0;
+  /* Progress bar color */
+  width: 100%;
+  /* Takes full width of .progress-bar-container */
+  height: 100%;
+  /* Takes full height of .progress-bar-container, then scaled by transform */
+  transform-origin: top center;
+  /* Animation scales from the top */
+  border-radius: 12px;
+  /* Match container's rounding if desired */
+  transform: scaleY(0);
+  /* Initial state, JS controls actual progress */
+  transition: transform 0.4s ease-in-out;
+  position: relative;
+}
+
+.progress-tip {
+  position: absolute;
+  top: 99.5%;
+  left: 50%;
+  transform: translate(-49%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: rgba(173, 216, 230);
+  border-radius: 50%;
+  transition: top 0.4s ease-in-out;
+  overflow: visible;
+}
+
+.experienceContentContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 80px;
+  padding-top: 40px;
+
+  /* The JS will track this element's scroll position */
+}
+
+.column {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.scroller-column {
+  flex-basis: 5%;
+  /* Narrower column for the progress bar */
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.trigger-box {
+  width: 100%;
+  min-height: 22vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+}
+
+
+.trigger_box-company {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.trigger_box-date {
+  width: 30%;
+}
+
+.trigger-box p {
+  font-size: 0.9rem;
+  text-align: justify;
+}
+
+.progress-bar-container {
+  width: 12px;
+  /* Width of the progress bar track */
+  /* min-height: 90vh; */
+  /* Max height of the progress bar. It will stick here. */
+  height: 95%;
+  overflow: visible;
+}
+
+.trigger_box-date {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
+.mobileNoDisplay {
+  display: flex;
+}
+
+.mobileDisplay {
+  display: none;
+}
+
+.mobileExp {
+  min-height: 20vh;
+}
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .experienceContentContainer {
+    padding: 20px 40px;
+  }
+
+  .experienceContainer {
+    padding: 20px 0px;
+  }
+
+  .column {
+    flex-basis: 45%;
+  }
+
+  .scroller-column {
+    flex-basis: 5%;
+  }
+
+  .trigger_box-company h3,
+  .trigger_box-company h4 {
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .trigger-box {
+    padding: 0px;
+  }
+
+  .trigger-box p {
+    margin: 0px;
+    font-size: 0.72rem;
+  }
+}
+
+/* Large Phones (≤ 768px) */
+@media (max-width: 768px) {
+  .mobileNoDisplay {
+    display: none;
+  }
+
+  .mobileDisplay {
+    display: block;
+    margin-left: 20px;
+  }
+
+  .mobileExp .trigger-box {
+    min-height: 0px;
+  }
+
+  .mobileExp .trigger-box p {
+    margin-top: 10px;
+  }
+
+  .mobileExp .trigger-box .trigger_box-company h3,
+  .mobileExp .trigger-box .trigger_box-company h4 {
+    text-align: left;
+  }
+
+
+
+}
+
+/* Small Phones (≤ 480px) */
+@media (max-width: 480px) {
+
+  /* override styles for small phones */
+  .trigger_box-date {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .mobileExp .trigger-box .trigger_box-company h3 {
+    font-size: 1rem;
+  }
+
+  .mobileExp .trigger-box .trigger_box-company h4 {
+    font-size: .75rem;
+  }
+
+  .experienceContentContainer {
+    padding: 20px 20px;
+  }
+
+}

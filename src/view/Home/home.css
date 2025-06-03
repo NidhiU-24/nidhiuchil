@@ -1,0 +1,264 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: var(--background-color);
+    position: relative;
+    /* overflow-x: hidden; */
+}
+
+.leftContainer,
+.rightContainer {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.centerContainer {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.titleText {
+    justify-content: center;
+    align-items: center;
+}
+
+.introText {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.nameContainer {
+    width: 90%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+
+h1.title {
+    margin: 0px;
+    color: #0f1b61;
+    line-height: 1;
+    text-align: left;
+    font-size: 4.5rem;
+    font-weight: normal;
+}
+
+h2.subtitle {
+    font-size: 2.5rem;
+    line-height: 1;
+    color: #0f1b61;
+    text-align: left;
+    font-weight: normal;
+}
+
+.rightContainer .nameContainer {
+    width: 90%;
+    justify-content: flex-start;
+}
+
+.typing-text {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cursor {
+    display: inline-block;
+    width: 1ch;
+    animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+br {
+    display: inline;
+}
+
+
+.leftContainer,
+.rightContainer,
+.centerContainer img {
+    will-change: transform;
+}
+
+.mainImage {
+    width: 500px;
+    height: 500px
+}
+
+
+/* Small devices (phones) */
+@media (max-width: 480px) {
+    h1.title {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    h2.subtitle {
+        font-size: 1.25rem;
+        margin-top: 10px;
+        text-align: center;
+
+    }
+
+}
+
+/* Medium devices (larger phones) */
+@media (max-width: 768px) {
+    h1.title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    h2.subtitle {
+        font-size: 1.75rem;
+        margin: 0;
+        text-align: center;
+
+    }
+
+
+    .introText {
+        width: 100%;
+    }
+
+    .mainImage {
+        width: 325px;
+        height: 325px
+    }
+
+    .leftContainer,
+    .rightContainer {
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .leftContainer,
+    .rightContainer {
+        width: 100%;
+    }
+
+    .leftContainer {
+        justify-content: flex-end;
+        height: 30%;
+    }
+
+    .rightContainer {
+        justify-content: flex-start;
+        height: 20%;
+    }
+
+    .rightContainer .nameContainer {
+        justify-content: center;
+    }
+
+    .centerContainer{
+        height: 50%;
+    }
+
+    .mainImage {
+        margin-bottom: 20px;
+    }
+
+    br {
+        display: none;
+    }
+
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+
+    h1.title {
+        font-size: 2.25rem;
+    }
+
+    h2.subtitle {
+        font-size: 1.5rem;
+    }
+
+    .introText {
+        width: 96%;
+    }
+
+    .mainImage {
+        width: 375px;
+        height: 375px
+    }
+
+}
+
+/* Laptops */
+@media (min-width: 1025px) and (max-width: 1499px) {
+    h1.title {
+        font-size: 2.8rem;
+        padding-left: 15px;
+    }
+
+    h2.subtitle {
+        font-size: 2rem;
+        padding-left: 15px;
+        margin-top: 10px;
+
+    }
+
+    .mainImage {
+        width: 500px;
+        height: 500px
+    }
+
+    .nameContainer {
+        width: 100%;
+        padding: 0px 5px;
+    }
+
+    .introText {
+        width: 95%;
+    }
+
+
+}
+
+/* Large desktops */
+@media (min-width: 1450px) and (max-width: 1919px) {
+    h1.title {
+        font-size: 4rem;
+    }
+
+    h2.subtitle {
+        font-size: 2.8rem;
+    }
+}
+
+@media (min-width: 1920px) {}

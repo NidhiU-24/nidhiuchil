@@ -1,0 +1,33 @@
+.heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headText {
+    margin: 0px;
+    font-size: 4rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.headingUnder {
+    width: 10vw;
+    height: 5px;
+    background: rgb(127, 0, 224);
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .headText {
+        font-size: 3rem;
+    }
+
+    .headingUnder {
+        margin-top: 5px;
+    }
+
+}

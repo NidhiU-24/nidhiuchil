@@ -1,0 +1,175 @@
+.button-wrapper {
+  position: relative;
+  width: 10vw;
+  height: 3vw;
+}
+
+/* this is the background layer */
+.custom-button::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: repeating-linear-gradient(135deg,
+      rgba(173, 216, 230, 0.3) 0,
+      rgba(173, 216, 230, 0.3) 3px,
+      transparent 3px,
+      transparent 6px);
+  transform: translate(20px, 20px);
+  transition: transform 0.8s ease, background-color 0.8s ease;
+  z-index: 0;
+  border-radius: 40px;
+  width: 10vw;
+  height: 3vw;
+  /* optional, for smooth corners */
+}
+
+/* foreground button */
+.custom-button {
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  border: 2px solid #7f00e0;
+  border-radius: 40px;
+  z-index: 1;
+  pointer-events: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* flex-direction: column; */
+
+}
+
+/* on hover */
+.button-wrapper:hover .custom-button::before {
+  transform: translate(0, 0);
+  background: rgba(173, 216, 230, 0.7);
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+
+}
+
+.button-wrapper:hover .custom-button {
+  border-color: rgba(173, 216, 230);
+  border: 2px solid #7f00e0;
+}
+
+.custom-button a {
+  z-index: 2;
+}
+
+.svg_icon {
+  width: 3vw;
+  height: 2vw;
+}
+
+.svg_icon_email {
+  width: 2.5vw;
+  height: 1.8vw;
+}
+
+
+@media (max-width: 480px) {
+  .svg_icon {
+    width: 5vw;
+    height: 4vw;
+  }
+
+  .svg_icon_email {
+    width: 3.5vw;
+    height: 2.8vw;
+  }
+
+  .button-wrapper {
+    position: relative;
+    width: 30vw;
+    height: 10vw;
+  }
+
+  .custom-button::before {
+    width: 30vw;
+    height: 10vw;
+  }
+}
+
+/* Medium devices (larger phones) */
+@media (max-width: 767px) {
+  .svg_icon {
+    width: 5vw;
+    height: 4vw;
+  }
+
+  .svg_icon_email {
+    width: 3.5vw;
+    height: 2.8vw;
+  }
+
+  .button-wrapper {
+    position: relative;
+    width: 25vw;
+    height: 8vw;
+  }
+
+  .custom-button::before {
+    width: 25vw;
+    height: 8vw;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .svg_icon {
+    width: 5vw;
+    height: 4vw;
+  }
+
+  .svg_icon_email {
+    width: 3.5vw;
+    height: 2.8vw;
+  }
+
+  .button-wrapper {
+    position: relative;
+    width: 18vw;
+    height: 6vw;
+  }
+
+  .custom-button::before {
+    width: 18vw;
+    height: 6vw;
+  }
+}
+
+/* Laptops */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .svg_icon {
+    width: 3vw;
+    height: 2.5vw;
+  }
+
+  .svg_icon_email {
+    width: 3vw;
+    height: 2.5vw;
+  }
+
+  .button-wrapper {
+    position: relative;
+    width: 15vw;
+    height: 4vw;
+  }
+
+  .custom-button::before {
+    width: 15vw;
+    height: 4vw;
+  }
+
+}
+
+/* Large desktops */
+@media (min-width: 1441px) and (max-width: 1919px) {}
+
+@media (min-width: 1920px) {}
