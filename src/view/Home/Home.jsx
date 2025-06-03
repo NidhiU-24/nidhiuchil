@@ -71,7 +71,7 @@ const Home = () => {
                         <h1 className="title">
                             Hi, my
                             <br /> name is
-                            <span style={{ fontWeight: 'bold' }}> Nidhi.</span>
+                            <span style={{ fontWeight: 'bold', color: '#f47f2b' }}> Nidhi.</span>
                         </h1>
                         <h2 className="subtitle">I turn raw data into stories and decisions.</h2>
                     </div>

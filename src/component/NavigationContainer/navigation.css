@@ -23,6 +23,8 @@
 }
 
 .navSubTitle {
+    font-style: italic;
+    font-weight: normal;
     margin: 0;
     font-size: 1.75rem;
     padding-top: 20px;
@@ -36,9 +38,9 @@
 
 
 /* Laptops */
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 1440px) {
     .navigationConatiner {
-        width: 90%;
+        width: 60%;
 
     }
 }
