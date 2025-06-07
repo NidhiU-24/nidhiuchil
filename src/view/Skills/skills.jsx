@@ -2,20 +2,16 @@ import React, { useEffect, useState } from "react";
 import "./skills.css"
 import Heading from "../../component/heading";
 
-const skills = {
-    languageLibrary: [{ name: 'Python', path: '/svg/python.svg' }, { name: 'R', path: '/svg/R.svg' }, { name: 'MySQL', path: '/svg/mysql.svg' }, { name: 'PostgreSQL', path: '/svg/postgresql.svg' }, { name: 'SQLite', path: '/svg/sqlite.svg' },  { name: 'Pandas', path: '/svg/pandas.svg' }, { name: 'NumPy', path: '/svg/NumPy.svg' }, { name: 'Scikit-learn', path: '/svg/scikit-learn.svg' }, { name: 'Statsmodels', path: '/svg/statsmodels.svg' }],
-    dataVisualization: [{ name: 'Power BI', path: '/svg/power-bi-icon.svg' }, { name: 'Tableau', path: '/svg/tableau.svg' }, { name: 'Matplotlib', path: '/svg/Matplotlib.svg' }, { name: 'Seaborn', path: '/svg/seaborn.svg' }, { name: 'Ploty', path: '/svg/Ploty.svg' }, { name: 'ggplot2', path: '/svg/ggplot2.svg' }],
-    dataManagement: [{ name: 'Alteryx', path: '/svg/Alteryx.svg' }, { name: 'Power Query', path: '/svg/power-bi-icon.svg' }, { name: 'Excel', path: '/svg/microsoft-excel-icon.svg' }, { name: 'MongoDB', path: '/svg/mongodb.svg' }],
-    workflowManagement: [{ name: 'Jira', path: '/svg/Jira.svg' }, { name: 'Trello', path: '/svg/Trello.svg' }, { name: 'Service Now', path: '/svg/service_now.svg' }, { name: 'Share Point', path: '/svg/sharepoint-icon.svg' }]
-}
 
-
-const Skills = () => {
+const Skills = ({data}) => {
     const [current, setCurrent] = useState("all")
-    const [data, setData] = useState([])
+    const [filteredData, setFilteredData] = useState([])
     const [isAnimating, setIsAnimating] = useState(false);
+    const [skillData, setSkillData] = useState({})
+
     useEffect(() => {
         filterData("all")
+        setSkillData(data)
     }, [])
 
     const toggleContent = (val) => {
@@ -27,24 +23,24 @@ const Skills = () => {
         }, 300);
     }
 
-    const filterData = (val) => {
+    const filterData = (val, skillArray=skillData[val]?skillData[val]: data) => {
         switch (val) {
             case "languageLibrary":
-                setData(skills[val])
+                setFilteredData(skillArray)
 
                 break;
             case "dataVisualization":
-                setData(skills[val])
+                setFilteredData(skillArray)
                 break;
             case "dataManagement":
-                setData(skills[val])
+                setFilteredData(skillArray)
                 break;
             case "workflowManagement":
-                setData(skills[val])
+                setFilteredData(skillArray)
                 break;
             default:
-                let skillArr = [...Object.values(skills).flat()]
-                setData(skillArr)
+                let skillArr = [...Object.values(skillArray).flat()]
+                setFilteredData(skillArr)
         }
     }
 
@@ -63,7 +59,7 @@ const Skills = () => {
                 </div>
                 <div className={`skillsContentHolder ${isAnimating ? 'fade-out' : ''}`}>
                     {
-                        data.map((el, index) => (
+                        filteredData.map((el, index) => (
                             <div className="skills" key={index}>
                                 <img src={el.path} className="skills_img" />
                                 <span className="skillsImg_text">{el.name}</span>
@@ -73,6 +69,8 @@ const Skills = () => {
                 </div>
             </div>
         </div>
+
+        // <></>
     )
 }
 

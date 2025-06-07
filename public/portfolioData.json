@@ -1,0 +1,224 @@
+{
+    "portfolio": {
+        "home": {
+            "name": "Nidhi",
+            "subTitle": "I turn raw data into stories and decisions.",
+            "jobTitles": [
+                "Data Scientist",
+                "Data Analyst",
+                "Business Analyst"
+            ],
+            "img": ""
+        },
+        "about": {
+            "img": "",
+            "bullets": [
+                {
+                    "icon": "📊",
+                    "text": "I'm a data professional with a passion for uncovering insights hidden in numbers."
+                },
+                {
+                    "icon": "🧠",
+                    "text": "With experience in both data analysis and data science, I specialize in transforming raw, complex data into meaningful stories and actionable strategies."
+                },
+                {
+                    "icon": "🧹",
+                    "text": "From cleaning messy datasets to building predictive models, I enjoy the entire journey of data — from exploration to decision-making."
+                },
+                {
+                    "icon": "🚀",
+                    "text": "Whether it's optimizing business processes, solving real-world problems, or discovering patterns others miss, I aim to turn data into a powerful asset."
+                },
+                {
+                    "icon": "🛠️",
+                    "text": "My toolkit includes Python, SQL, and machine learning, along with data visualization tools like Tableau and Power BI."
+                },
+                {
+                    "icon": "💡",
+                    "text": "But more than tools, I bring curiosity, critical thinking, and a drive to make data work for people — not just dashboards."
+                }
+            ]
+        },
+        "experience": {
+            "exp": [
+                {
+                    "company": "Alexion Pharmaceuticals (AstraZeneca)",
+                    "title": "Data Analyst and Program Coordinator",
+                    "year": "2024",
+                    "content": "Led the design of real-time Power BI dashboards and automated reporting workflows using Alteryx and Power Automate, improving efficiency by up to 40%. Transformed multi-source data using Power Query and Excel to support strategic insights and KPI alignment. Conducted root cause analyses and built ETL pipelines that enhanced compliance tracking and reduced project delays by 15%."
+                },
+                {
+                    "company": "Northeastern University, Boston, USA",
+                    "title": "Masters of Science in Data Analytics Engineering",
+                    "year": "2023",
+                    "content": "Pursuing my Master’s in Data Analytics Engineering at Northeastern University has provided me with a strong foundation in statistical modeling, data visualization, machine learning, and database management. I’ve also gained valuable experience in operations research and supply chain analytics, as well as engineering project management. Through hands-on projects and cross-functional collaboration, I've gained practical experience in translating complex data into actionable insights."
+                },
+                {
+                    "company": "ACG PAM Pharma Technologies",
+                    "title": "Data Analyst",
+                    "year": "2021",
+                    "content": "Conducted detailed data analysis using SQL and Excel to identify inefficiencies, leading to a 15% improvement in operational performance. Built and maintained Excel and Power BI dashboards to enhance reporting accuracy, while managing a digital Service Portal that improved task efficiency for 100+ field engineers. Collaborated cross-functionally using JIRA in an agile setup, reducing project delays by 35% through better issue tracking."
+                },
+                {
+                    "company": "University of Mumbai, DJSCE Mumbai, INDIA",
+                    "title": "Bachelor of Engineering in Electronics",
+                    "year": "2016",
+                    "content": "At the University of Mumbai, I earned my Bachelor's in Electronics Engineering, where I built a strong foundation in circuit design, signal processing, and communication systems. This experience sharpened my analytical thinking and introduced me to the fundamentals of data, systems, and engineering problem-solving"
+                }
+            ]
+        },
+        "projects": {
+            "project": [
+                {
+                    "name": "Predicting Player Online Gaming Behavior",
+                    "tools": "Python (Pandas, scikit-learn), SHAP, Google Colab,  Matplotlib, Seaborn.",
+                    "info": "Developed and evaluated classification models to predict user engagement in gaming, uncovering key behavioral drivers through model interpretation and informing data-driven retention strategies.",
+                    "link": "https://github.com/NidhiU-24/Predicting-Player-Online-Gaming-Behavior",
+                    "img": "assets/project_0.jpeg"
+                },
+                {
+                    "name": "Bar Crawl Detecting Heavy Drinking",
+                    "tools": "Python (Pandas, NumPy), SciPy, Matplotlib, Seaborn, Google Colab, Tableau.",
+                    "info": "Applied time series analysis and classification techniques to detect behavioral patterns associated with heavy drinking, leveraging entropy-based features for predictive modeling and early intervention insights.",
+                    "link": "https://github.com/NidhiU-24/Bar-Crawl-Detecting-Heavy-Drinking",
+                    "img": "assets/project_1.jpeg"
+                },
+                {
+                    "name": "NYC TLC Trip Record Analysis Insights into Urban Mobility Patterns",
+                    "tools": "R (dplyr, ggplot2, lubridate, sf, leaflet), RStudio, SQL, PowerBI",
+                    "info": "Performed exploratory and geospatial analysis on NYC taxi trip data to identify urban mobility patterns and tipping behavior, supporting insights for predictive modeling and transportation optimization.",
+                    "link": "https://github.com/NidhiU-24/NYC-TLC-Trip-Record-Analysis-Insights-into-Urban-Mobility-Patterns",
+                    "img": "assets/project_2.jpeg"
+                },
+                {
+                    "name": "Fitness and Health Management for NBA players",
+                    "tools": "SQL (MySQL), MongoDB, Tableau, Python (Pandas, NumPy), UML/EER modeling, Excel.",
+                    "info": "Developed a centralized data system to analyze and manage NBA player health, fitness, and performance metrics, enabling data-driven insights for injury trends, rehabilitation, and training optimization.",
+                    "link": "https://github.com/NidhiU-24/Fitness-and-Health-management-for-NBA-players",
+                    "img": "assets/project_3.jpeg"
+                },
+                {
+                    "name": "Urban spatial order: street network orientation, configuration, and entropy",
+                    "tools": "Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, SciPy), Google Colab",
+                    "info": "Applied clustering techniques to analyze street network patterns across 100 global cities, uncovering spatial similarities based on features like circuity, orientation entropy, and connectivity to support urban planning insights.",
+                    "link": "https://github.com/NidhiU-24/Urban-spatial-order-street-network-orientation-configuration-and-entropy",
+                    "img": "assets/project_4.jpeg"
+                },
+                {
+                    "name": "PwC Switzerland Job Simulation",
+                    "tools": "Power BI, DAX, Excel, Power Query",
+                    "info": "Completed a job simulation with PwC Switzerland, building interactive Power BI dashboards to analyze call center performance, customer retention, and HR diversity metrics, showcasing data-driven solutions across business functions.",
+                    "link": "https://github.com/NidhiU-24/PwC-Switzerland-Power-BI-Job-Simulation",
+                    "img": "assets/project_5.jpeg"
+                }
+            ]
+        },
+        "skills": {
+            "languageLibrary": [
+                {
+                    "name": "Python",
+                    "path": "/svg/python.svg"
+                },
+                {
+                    "name": "R",
+                    "path": "/svg/R.svg"
+                },
+                {
+                    "name": "MySQL",
+                    "path": "/svg/mysql.svg"
+                },
+                {
+                    "name": "PostgreSQL",
+                    "path": "/svg/postgresql.svg"
+                },
+                {
+                    "name": "SQLite",
+                    "path": "/svg/sqlite.svg"
+                },
+                {
+                    "name": "Pandas",
+                    "path": "/svg/pandas.svg"
+                },
+                {
+                    "name": "NumPy",
+                    "path": "/svg/NumPy.svg"
+                },
+                {
+                    "name": "Scikit-learn",
+                    "path": "/svg/scikit-learn.svg"
+                },
+                {
+                    "name": "Statsmodels",
+                    "path": "/svg/statsmodels.svg"
+                }
+            ],
+            "dataVisualization": [
+                {
+                    "name": "Power BI",
+                    "path": "/svg/power-bi-icon.svg"
+                },
+                {
+                    "name": "Tableau",
+                    "path": "/svg/tableau.svg"
+                },
+                {
+                    "name": "Matplotlib",
+                    "path": "/svg/Matplotlib.svg"
+                },
+                {
+                    "name": "Seaborn",
+                    "path": "/svg/seaborn.svg"
+                },
+                {
+                    "name": "Ploty",
+                    "path": "/svg/Ploty.svg"
+                },
+                {
+                    "name": "ggplot2",
+                    "path": "/svg/ggplot2.svg"
+                }
+            ],
+            "dataManagement": [
+                {
+                    "name": "Alteryx",
+                    "path": "/svg/Alteryx.svg"
+                },
+                {
+                    "name": "Power Query",
+                    "path": "/svg/power-bi-icon.svg"
+                },
+                {
+                    "name": "Excel",
+                    "path": "/svg/microsoft-excel-icon.svg"
+                },
+                {
+                    "name": "MongoDB",
+                    "path": "/svg/mongodb.svg"
+                }
+            ],
+            "workflowManagement": [
+                {
+                    "name": "Jira",
+                    "path": "/svg/Jira.svg"
+                },
+                {
+                    "name": "Trello",
+                    "path": "/svg/Trello.svg"
+                },
+                {
+                    "name": "Service Now",
+                    "path": "/svg/service_now.svg"
+                },
+                {
+                    "name": "Share Point",
+                    "path": "/svg/sharepoint-icon.svg"
+                }
+            ]
+        },
+        "socials":{
+            "github":"https://github.com/NidhiU-24",
+            "linkedIn": "https://www.linkedin.com/in/nidhi-uchil24/",
+            "email":"mailto:nidhiuchil24@gmail.com?subject=Let's Connect&body=Hi Nidhi,"
+        }
+    }
+}

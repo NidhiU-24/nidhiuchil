@@ -1,11 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./home.css"
 const titles = ["Data Scientist", "Data Analyst", "Business Analyst"];
-const Home = () => {
+const Home = ({data}) => {
     const [displayedText, setDisplayedText] = useState("");
     const [titleIndex, setTitleIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const [charIndex, setCharIndex] = useState(0);
+    const [titles, setTitles] = useState(data.jobTitles)
+    const titleColors = ["#3d98ec", "#54ce51", "#f42b2b"]
 
     useEffect(() => {
         const currentTitle = titles[titleIndex];
@@ -71,9 +73,9 @@ const Home = () => {
                         <h1 className="title">
                             Hi, my
                             <br /> name is
-                            <span style={{ fontWeight: 'bold', color: '#f47f2b' }}> Nidhi.</span>
+                            <span style={{ fontWeight: 'bold', color: '#f47f2b' }}> {data.name}.</span>
                         </h1>
-                        <h2 className="subtitle">I turn raw data into stories and decisions.</h2>
+                        <h2 className="subtitle">{data.subTitle}</h2>
                     </div>
                 </div>
             </div>
@@ -82,8 +84,8 @@ const Home = () => {
             </div>
             <div className="rightContainer" ref={rightRef}>
                 <div className="nameContainer">
-                    <span><h1 className="title">I'm a <br /> <span style={{ fontWeight: 'bold' }} className="typing-text">{displayedText}
-                        <span className="cursor">|</span></span></h1>
+                    <span><h1 className="title">I'm a <br /> <span style={{ fontWeight: 'bold', color:titleColors[titleIndex] }} className="typing-text">{displayedText}
+                        <span className="cursor" style={{color:titleColors[titleIndex]}}>|</span></span></h1>
                     </span>
                 </div>
             </div>

@@ -3,54 +3,44 @@ import { useInView } from 'react-intersection-observer';
 import Heading from "../../component/heading";
 import "./experience.css"
 
-const leftData = [
-    {
-        h2: 'Alexion Pharmaceuticals (AstraZeneca)',
-        h3: 'Data Analyst and Program Coordinator',
-        date: 2024
-    },
-    {
-        h2: 'Northeastern University, Boston, USA',
-        h3: 'Masters of Science in Data Analytics Engineering',
-        date: 2023
-    },
-    {
-        h2: 'ACG PAM Pharma Technologies',
-        h3: 'Data Analyst',
-        date: 2021
-    },
-    {
-        h2: 'University of Mumbai, DJSCE Mumbai, INDIA',
-        h3: 'Bachelor of Engineering in Electronics',
-        date: 2016
-    },
-]
 
-const rightData = [
-    {
-        content: "Led the design of real-time Power BI dashboards and automated reporting workflows using Alteryx and Power Automate, improving efficiency by up to 40%. Transformed multi-source data using Power Query and Excel to support strategic insights and KPI alignment. Conducted root cause analyses and built ETL pipelines that enhanced compliance tracking and reduced project delays by 15%."
-    },
-    {
-        content: "Pursuing my Master’s in Data Analytics Engineering at Northeastern University has provided me with a strong foundation in statistical modeling, data visualization, machine learning, and database management. I’ve also gained valuable experience in operations research and supply chain analytics, as well as engineering project management. Through hands-on projects and cross-functional collaboration, I've gained practical experience in translating complex data into actionable insights."
-    },
-    {
-        content: "Conducted detailed data analysis using SQL and Excel to identify inefficiencies, leading to a 15% improvement in operational performance. Built and maintained Excel and Power BI dashboards to enhance reporting accuracy, while managing a digital Service Portal that improved task efficiency for 100+ field engineers. Collaborated cross-functionally using JIRA in an agile setup, reducing project delays by 35% through better issue tracking."
-    },
-    {
-        content: "At the University of Mumbai, I earned my Bachelor's in Electronics Engineering, where I built a strong foundation in circuit design, signal processing, and communication systems. This experience sharpened my analytical thinking and introduced me to the fundamentals of data, systems, and engineering problem-solving"
-    }
-]
 
-const Experience = () => {
+const Experience = ({ data }) => {
     const [progress, setProgress] = useState(0); // Progress from 0 to 1
     const containerRef = useRef(null);
     const itemRefs = useRef([]);
     const hasReachedRefs = useRef([]);
     const [opacity, setOpacity] = useState([0.3, 0.3, 0.3, 0.3])
 
+    const [leftData, setLeftData] = useState([])
+    const [rightData, setRightData] = useState([])
+
+    useEffect(() => {
+        filterData()
+    }, [])
+
+
+    const filterData = () => {
+        let companyInfo = []
+        let companyContent = []
+        data.exp.forEach(element => {
+            companyInfo.push({
+                company: element.company,
+                title: element.title,
+                year: element.year
+            })
+            companyContent.push({ content: element.content })
+            setLeftData(companyInfo)
+            setRightData(companyContent)
+        });
+    }
+
+
     const { ref: inViewRef, inView } = useInView({
         threshold: 0, // Trigger as soon as any part is visible
     });
+
+
 
     const setRefs = useCallback(
         (node) => {
@@ -191,10 +181,10 @@ const Experience = () => {
                     {leftData.map((el, index) => (
                         <div className="trigger-box" ref={(el) => (itemRefs.current[index] = el)} key={index} style={{ opacity: opacity[index], transition: 'opacity 0.6s ease-in-out' }}>
                             <div className="trigger_box-company">
-                                <h3>{el.h2}</h3>
-                                <h4>{el.h3}</h4>
+                                <h3>{el.company}</h3>
+                                <h4>{el.title}</h4>
                             </div>
-                            <div className="trigger_box-date">{el.date}</div>
+                            <div className="trigger_box-date">{el.year}</div>
                         </div>
                     ))}
                 </div>
@@ -206,7 +196,7 @@ const Experience = () => {
                             style={{
                                 transform: `scaleY(${progress})`,
                             }}
-                            aria-valuenow={Math.round(progress * 100)} // For accessibility
+                            aria-valuenow={Math.round(progress * 100)}
                         >
                             <div className="progress-tip"></div>
                         </div>
@@ -227,18 +217,18 @@ const Experience = () => {
                     <div className="column dateNTitle ">
                         {leftData.map((el, index) => (
                             <div className="mobileExp" key={index}>
-                            <div className="trigger-box" ref={(el) => (itemRefs.current[index] = el)} style={{ opacity: opacity[index], transition: 'opacity 0.6s ease-in-out' }}>
-                                <div className="trigger_box-company">
-                                    <h3>{el.h2}</h3>
-                                    <h4>{el.h3}</h4>
+                                <div className="trigger-box" ref={(el) => (itemRefs.current[index] = el)} style={{ opacity: opacity[index], transition: 'opacity 0.6s ease-in-out' }}>
+                                    <div className="trigger_box-company">
+                                        <h3>{el.company}</h3>
+                                        <h4>{el.title}</h4>
+                                    </div>
+                                    <div className="trigger_box-date">{el.date}</div>
                                 </div>
-                                <div className="trigger_box-date">{el.date}</div>
-                            </div>
-                            <div className="trigger-box" style={{ opacity: opacity[index], transition: 'opacity 0.6s ease-in-out' }}>
-                                <p>
-                                    {rightData[index].content}
-                                </p>
-                            </div>
+                                <div className="trigger-box" style={{ opacity: opacity[index], transition: 'opacity 0.6s ease-in-out' }}>
+                                    <p>
+                                        {rightData[index].content}
+                                    </p>
+                                </div>
                             </div>
                         ))}
                     </div>

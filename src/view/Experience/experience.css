@@ -81,7 +81,7 @@
 }
 
 .trigger-box p {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   text-align: justify;
 }
 
@@ -111,6 +111,15 @@
 .mobileExp {
   min-height: 20vh;
 }
+
+@media (max-width: 1440px) {
+  
+  .trigger-box p {
+    margin: 0px;
+    font-size: 0.95rem;
+  }
+}
+
 
 /* Tablets (≤ 1024px) */
 @media (max-width: 1024px) {

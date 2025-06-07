@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Loader from './component/Loader/loader';
+import ErrorPage from './ErrorHandler/error';
+import ErrorBoundary from './ErrorHandler/errorBoundary';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ErrorBoundary>
+      <App/>
+    </ErrorBoundary>
   </React.StrictMode>
 );
 
